@@ -24,38 +24,45 @@ python setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openb
 # other packages
 pip install git+https://github.com/zb12138/ptio.git # ptio
 pip install bitstring
-# pip install loguru cprint torchac h5py plyfile tensorboard ninja
-# pip install plyfile open3d==0.18.0
 ```
 
 Reference for the compilation (```exe/DeepRAHT```) platform
 ```
-DeepRAHT version 25.7.1
-==========System==========
-Linux-4.4.0-176-generic-x86_64-with-glibc2.17
+Author Chunyang Fu, chunyangf@qq.com
+Built on 2026-05-19
+==============================
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=18.04
 DISTRIB_CODENAME=bionic
-DISTRIB_DESCRIPTION="Ubuntu 18.04.4 LTS"
-3.8.20 (default, Oct  3 2024, 15:24:27) 
-[GCC 11.2.0]
-==========Pytorch==========
-1.12.1+cu113
-torch.cuda.is_available(): True
-==========NVIDIA-SMI==========
+DISTRIB_DESCRIPTION="Ubuntu 18.04.6 LTS"
 /usr/bin/nvidia-smi
-Driver Version 470.256.02
-CUDA Version 11.4
-==========NVCC==========
 /usr/local/cuda/bin/nvcc
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2022 NVIDIA Corporation
 Built on Tue_May__3_18:49:52_PDT_2022
 Cuda compilation tools, release 11.7, V11.7.64
 Build cuda_11.7.r11.7/compiler.31294372_0
-==========CC==========
 /usr/bin/c++
-c++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+c++ (Ubuntu 8.4.0-1ubuntu1~18.04) 8.4.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+==========System==========
+Linux-5.15.123.1-microsoft-standard-WSL2-x86_64-with-glibc2.17
+3.8.19 (default, Mar 20 2024, 19:58:24)
+[GCC 11.2.0]
+==========Pytorch==========
+1.13.1+cu117
+torch.cuda.is_available(): True
+==========NVIDIA-SMI==========
+Driver Version 581.42
+CUDA Version 13.0
+VBIOS Version 94.04.63.00.11
+Image Version G190.0510.00.02
+GSP Firmware Version N/A
+==========NVCC==========
+==========CC==========
 ==========MinkowskiEngine==========
 0.5.4
 MinkowskiEngine compiled with CUDA Support: True
@@ -99,6 +106,7 @@ You might still be able to extract the contents of this AppImage
 if you run it with the --appimage-extract option.  
 (You might have encountered issues due to using Docker. We will decompress run the application.)
 ```bash
+sudo apt install fuse
 sudo apt install -y libfuse2 # and try again
 ```
 or
